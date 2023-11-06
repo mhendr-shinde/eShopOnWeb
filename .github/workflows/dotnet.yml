@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Secret
-      run: echo "Hello ${{ env:PASS }} "
+      run: echo "Hello $env.PASS "
       with:
         env: 
           PASS: ${{ secrets.SECRET_PASS }}
